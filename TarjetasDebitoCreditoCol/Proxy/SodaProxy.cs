@@ -50,8 +50,7 @@ namespace TarjetasDebitoCreditoCol.Proxy
             var distinctEntidades = from e in dataset.GetRows().Take(4)
                                     orderby e.CodigoEntidad descending
                                     
-                                    select e;
-                
+                                    select e;              
 
 
 
