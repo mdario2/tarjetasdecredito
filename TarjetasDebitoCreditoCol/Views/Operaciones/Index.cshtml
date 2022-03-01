@@ -1,0 +1,102 @@
+﻿@model List<TarjetasDebitoCreditoCol.Models.Operacion>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                TipoEntidad
+            </th>
+            <th>
+               CodigoEntidad
+            </th>
+            <th>
+                NombreEntidad
+            </th>
+            <th>
+                FechaCorte
+            </th>
+            <th>
+                CodigoUca
+            </th>
+            <th>
+                NombreUca
+            </th>
+            <th>
+                Subcuenta
+            </th>
+            <th>
+                Descripcion
+            </th>
+            <th>
+                PersonaNatural
+            </th>
+            <th>
+                PersonaJuridica
+            </th>
+            <th>
+                TotalTarjetas
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @*@foreach (var nota in Model)
+        {
+            <tr>
+                <td>@nota.NotariaID</td>
+                <td>@nota.Notario</td>
+                <td>@nota.Direccion</td>
+                <td>@nota.HorarioNotaria</td>
+                <td>@nota.Telefono</td>
+            </tr>
+
+        }*@
+        @foreach (var item in Model) {
+                <tr>
+                    <td>
+                        @item.TipoEntidad
+                    </td>
+                    <td>
+                        @item.CodigoEntidad
+                    </td>
+                    <td>
+                        @item.NombreEntidad
+                    </td>
+                    <td>
+                        @item.FechaCorte
+                    </td>
+                    <td>
+                        @item.CodigoUca
+                    </td>
+                    <td>
+                        @item.NombreUca
+                    </td>
+                    <td>
+                        @item.Subcuenta
+                    </td>
+                    <td>
+                        @item.Descripcion
+                    </td>
+                    <td>
+                        @item.PersonaNatural
+                    </td>
+                    <td>
+                        @item.PersonaJuridica
+                    </td>
+                    <td>
+                        @item.TotalTarjetas
+                    </td>
+                    
+                </tr>
+        }
+    </tbody>
+</table>
